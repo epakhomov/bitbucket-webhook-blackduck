@@ -1,0 +1,8 @@
+blackduck:
+  url: 'https://poc43.blackduck.synopsys.com/'
+  trust.cert: true
+  api.token: 'YWIyMzBmYjYtZmM3Ny00YzNhLThkYzItZGUwZjg1ZGJmODg0OjEyYzAxMGJmLTQxYzUtNDU4My04MTFlLTYzNGUwMjc2OGI1NQ=='
+detect:
+  project.name: 'bitbucket-node'
+logging:
+  level.com.synopsys.integration: 'DEBUG'
