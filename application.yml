@@ -1,7 +1,7 @@
 blackduck:
-  url: 'https://poc43.blackduck.synopsys.com/'
+  url: ''
   trust.cert: true
-  api.token: 'YWIyMzBmYjYtZmM3Ny00YzNhLThkYzItZGUwZjg1ZGJmODg0OjEyYzAxMGJmLTQxYzUtNDU4My04MTFlLTYzNGUwMjc2OGI1NQ=='
+  api.token: ''
 detect:
   project.name: 'bitbucket-node'
 logging:
