@@ -8,7 +8,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-
 app.post("/webhooks", bodyParser.raw({type: 'application/json'}), (req, res) => {
     let event;
 
@@ -19,7 +18,6 @@ app.post("/webhooks", bodyParser.raw({type: 'application/json'}), (req, res) => 
     }
     var hash = event.push.changes[0].old.target.hash
     exec(`bash <(curl -s -L https://detect.synopsys.com/detect.sh) --detect.project.version.name=${hash}`, {shell: '/bin/bash'}, (err, stdout, stderr) => {
-      //exec(`ls`, (err, stdout, stderr) => {
       if (err) {
         console.error(err)
       } else {
@@ -28,8 +26,7 @@ app.post("/webhooks", bodyParser.raw({type: 'application/json'}), (req, res) => 
        console.log(`stderr: ${stderr}`);
       }
     });
-
-    //console.log(event.push.changes[0].old.target.hash) // Call your action on the request here
+  
     res.status(200).end()
   });
 
